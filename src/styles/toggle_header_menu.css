@@ -1,0 +1,136 @@
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1fbd;
+    padding: 10px 15px;
+    margin-top: 10px;
+    height: 60px;
+    z-index: 99;
+  }
+  
+  .navigation  {
+    width: 100%;  
+    text-align: center;
+    color: #B19478;
+  }
+
+  
+  .toggler-container {
+      display: none;
+    }
+    
+    header a {
+        color: #222;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    
+    .navigation a {
+        margin-right: 20px;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform:capitalize;
+    }
+
+    .logo-rs {
+      display: flex;
+      margin-right: 30px;
+    }
+
+  
+    .navigation a:hover {
+        color: var(--color-second-orange-btn-hover);
+        transition: 0.3s;
+    }
+
+    .nav-link {
+      font-family: "Playfair";
+      color: #B19478;
+    }
+  
+  .nav-link.active  {
+    color: #ffa200;
+ }
+
+.logo_header {
+    display: flex;
+  }
+
+  .logo_header img {
+    margin: 0 10px 0 30px ;
+  }
+
+  .logo-link {
+    font-family: "Playfair";
+    font-size: 25px;
+    font-weight: 900;
+    text-align: center;
+    color: #B19478;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .sign-link {
+    display: flex;
+    justify-content: center;
+  } */
+  
+  .sign-link img {
+    width: 25px;
+    margin-right: 10px;
+  }
+
+
+  
+  @media (max-width: 1100px) {
+    .toggler-container {
+      display: block;
+    }
+    .toggler-container a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .toggler-container img {
+      width: 25px;
+    }
+  
+    .logo_header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+    .navigation {
+      position: absolute;
+      width: 240px;
+      background-color: #6b6b6b;
+      /* height: calc(100vh - 100%);
+      top: calc(100%); */
+      left: 0;
+      height: calc(100vh - 100%);
+      top: calc(100%);
+      padding-top: 30px;
+      transition: transform 0.4s ease-out;
+      transform: translateX(-100%);
+    }
+  
+    .navigation.active {
+      transform: translateX(0%);
+    }
+  
+    .navigation a {
+      display: block;
+      margin: 14px 0;
+      padding: 0 20px;
+    }
+
+    .sign-link {
+        margin-left: auto;
+    }
+  }
